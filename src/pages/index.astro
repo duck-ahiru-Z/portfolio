@@ -1,0 +1,66 @@
+---
+// src/pages/index.astro
+import Layout from '../layouts/Layout.astro';
+import awards from '../data/awards.json';
+import products from '../data/products.json';
+---
+
+<Layout title="私のポートフォリオ">
+  
+  <div class="text-center py-20 bg-blue-50">
+    <h1 class="text-4xl font-bold mb-4 text-gray-800">Hi, I'm [YourName]</h1>
+    <p class="text-xl text-gray-600 mb-8">
+      Web Engineer / Designer based in Japan
+    </p>
+  </div>
+
+  <section id="works" class="container mx-auto px-4 py-12">
+    <h2 class="text-2xl font-bold mb-8 text-center">Awards & Certifications</h2>
+    
+    <div class="max-w-2xl mx-auto space-y-6">
+      {awards.map((item) => (
+        <div class="bg-white p-6 rounded-lg shadow-md border-l-4 border-blue-500">
+          <div class="flex items-center mb-2">
+            <span class="text-sm text-gray-500 font-mono mr-4">{item.date}</span>
+            <h3 class="text-lg font-bold text-gray-800">{item.title}</h3>
+          </div>
+          <p class="text-gray-600">{item.description}</p>
+        </div>
+      ))}
+    </div>
+
+
+	<section id="products" class="container mx-auto px-4 py-12 bg-white">
+    <h2 class="text-2xl font-bold mb-8 text-center text-gray-800">Products</h2>
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+      {products.map((product) => (
+        <a href={product.url} target="_blank" class="block group hover:no-underline">
+          <div class="border border-gray-200 rounded-lg overflow-hidden shadow-sm hover:shadow-lg transition-shadow duration-300">
+            <div class="aspect-video overflow-hidden bg-gray-100">
+              <img 
+                src={product.image} 
+                alt={product.title} 
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+              />
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold mb-2 text-gray-800 group-hover:text-blue-600 transition-colors">{product.title}</h3>
+              <p class="text-gray-600 mb-4 text-sm">{product.description}</p>
+              <div class="flex flex-wrap gap-2">
+                {product.tags.map((tag) => (
+                  <span class="bg-gray-100 text-gray-600 px-2 py-1 rounded text-xs">
+                    {tag}
+                  </span>
+                ))}
+              </div>
+            </div>
+          </div>
+        </a>
+      ))}
+    </div>
+  </section>
+
+  </section>
+
+</Layout>

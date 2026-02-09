@@ -1,0 +1,44 @@
+---
+// src/layouts/Layout.astro
+import '../styles/global.css'; //
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+const year = new Date().getFullYear();
+---
+
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="ポートフォリオサイト" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>{title}</title>
+  </head>
+  <body class="bg-gray-50 text-gray-800 font-sans">
+    
+    <header class="bg-white shadow-sm sticky top-0 z-10">
+      <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+        <a href="/" class="text-xl font-bold text-blue-600">My Portfolio</a>
+        <nav>
+          <ul class="flex space-x-6">
+            <li><a href="/" class="hover:text-blue-500 transition">Home</a></li>
+            <li><a href="#about" class="hover:text-blue-500 transition">About</a></li>
+            <li><a href="#works" class="hover:text-blue-500 transition">Works</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container mx-auto px-4 py-8 min-h-screen">
+      <slot />
+    </main>
+
+    <footer class="bg-gray-800 text-white text-center py-6 mt-8">
+      <p>&copy; {year} My Portfolio. All rights reserved.</p>
+    </footer>
+  </body>
+</html>

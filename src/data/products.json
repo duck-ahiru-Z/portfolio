@@ -1,0 +1,16 @@
+[
+  {
+    "title": "TaskMaster",
+    "description": "直感的に操作できるタスク管理アプリ。ReactとFirebaseを使用し、リアルタイム更新に対応しました。",
+    "image": "https://placehold.co/600x400/2563eb/white?text=TaskMaster",
+    "url": "https://github.com/yourname/taskmaster",
+    "tags": ["React", "Firebase", "TypeScript"]
+  },
+  {
+    "title": "My Portfolio",
+    "description": "現在閲覧されているこのサイトです。AstroとTailwind CSSを使用し、爆速なパフォーマンスを実現。",
+    "image": "https://placehold.co/600x400/10b981/white?text=Portfolio",
+    "url": "https://github.com/yourname/portfolio",
+    "tags": ["Astro", "Tailwind CSS"]
+  }
+]
