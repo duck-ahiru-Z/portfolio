@@ -14,7 +14,7 @@
     "tags": ["HTML", "CSS", "JavaScript"]
   }, 
   {
-    "title": "偽クレジットカード番号生成器,
+    "title": "偽クレジットカード番号生成器",
     "description": "クレジットカード番号を生成してくれます。これで怪しいサイトも登録可能です。 #1日1アプリ",
     "image": "https://qiita-user-contents.imgix.net/https%3A%2F%2Fqiita-image-store.s3.ap-northeast-1.amazonaws.com%2F0%2F4229608%2Fd1d710f8-ab7b-4a41-bc50-9b39260a658c.png?ixlib=rb-4.0.0&auto=format&gif-q=60&q=75&w=1400&fit=max&s=e2371b83aa5858985f788143a2e78186",
     "url": "https://duck-ahiru-z.github.io/credit/",
@@ -77,5 +77,6 @@
     "tags": ["HTML", "CSS", "JavaScript", "Python"]
   }
 ]
+
 
 
