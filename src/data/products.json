@@ -3,7 +3,7 @@
     "title": "My Portfolio",
     "description": "現在閲覧されているこのサイトです。AstroとTailwind CSSを使用し、爆速なパフォーマンスを実現。",
     "image": "https://placehold.co/600x400/10b981/white?text=Portfolio",
-    "url": "https://github.com/yourname/portfolio",
+    "url": "https://duck-ahiru-z.github.io/portfolio/",
     "tags": ["Astro", "Tailwind CSS"]
   },
   {
@@ -24,7 +24,8 @@
     "title": "みかん・アイ",
     "description": "みかんの画像からみかんのおいしさを検出するシステムです。審査員特別賞を受賞しました。はじめてのシステムです。",
     "image": "https://placehold.co/600x400/2563eb/white?text=mikan.AI",
-    "url": "",
+    "url": "https://github.com/duck-ahiru-Z/mikan-ai",
     "tags": ["HTML", "CSS", "JavaScript", "Python"]
   }
 ]
+
