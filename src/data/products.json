@@ -7,6 +7,13 @@
     "tags": ["Astro", "Tailwind CSS"]
   },
   {
+    "title": "英訳添削システム",
+    "description": "受験生向けの英訳添削システムです。ただ、あんまり使わないでほしいかも。制限ないせいでお金が減っちゃいます。",
+    "image": "https://placehold.co/600x400/F58220/white?text=tensaku",
+    "url": "https://hidariude.streamlit.app/",
+    "tags": ["Python", "Streamlit"]
+  }, 
+  {
     "title": "数式入力表示システム",
     "description": "簡単に数式入力ができます。 #1日1アプリ",
     "image": "https://qiita-user-contents.imgix.net/https%3A%2F%2Fqiita-image-store.s3.ap-northeast-1.amazonaws.com%2F0%2F4229608%2F385c4681-b14d-4274-8dd3-59ab305ae034.png?ixlib=rb-4.0.0&auto=format&gif-q=60&q=75&w=1400&fit=max&s=72bcf4e613290eb5793ab35f4ce7bdee",
@@ -74,9 +81,10 @@
     "description": "みかんの画像からみかんのおいしさを検出するシステムです。審査員特別賞を受賞しました。はじめてのシステムです。",
     "image": "https://placehold.co/600x400/2563eb/white?text=mikan.AI",
     "url": "https://github.com/duck-ahiru-Z/mikan-ai",
-    "tags": ["HTML", "CSS", "JavaScript", "Python"]
+    "tags": ["HTML", "CSS", "JavaScript", "Python", "Flask"]
   }
 ]
+
 
 
 
