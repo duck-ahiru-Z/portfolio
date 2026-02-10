@@ -79,11 +79,12 @@
   {
     "title": "みかん・アイ",
     "description": "みかんの画像からみかんのおいしさを検出するシステムです。審査員特別賞を受賞しました。はじめてのシステムです。",
-    "image": "https://placehold.jp/f97316/ffffff/400x600.png?text=みかん・アイ"",
+    "image": "https://placehold.jp/f97316/ffffff/400x600.png?text=みかん・アイ",
     "url": "https://github.com/duck-ahiru-Z/mikan-ai",
     "tags": ["HTML", "CSS", "JavaScript", "Python", "Flask"]
   }
 ]
+
 
 
 
