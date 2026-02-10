@@ -2,7 +2,7 @@
   {
     "title": "My Portfolio",
     "description": "現在閲覧されているこのサイトです。AstroとTailwind CSSを使用し、爆速なパフォーマンスを実現。",
-    "image": "https://placehold.co/600x400/2563eb/white?text=Portfolio,
+    "image": "https://placehold.co/600x400/2563eb/white?text=Portfolio",
     "url": "https://duck-ahiru-z.github.io/portfolio/",
     "tags": ["Astro", "Tailwind CSS"]
   },
@@ -84,6 +84,7 @@
     "tags": ["HTML", "CSS", "JavaScript", "Python", "Flask"]
   }
 ]
+
 
 
 
