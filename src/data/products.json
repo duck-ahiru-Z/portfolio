@@ -1,16 +1,30 @@
 [
   {
-    "title": "TaskMaster",
-    "description": "直感的に操作できるタスク管理アプリ。ReactとFirebaseを使用し、リアルタイム更新に対応しました。",
-    "image": "https://placehold.co/600x400/2563eb/white?text=TaskMaster",
-    "url": "https://github.com/yourname/taskmaster",
-    "tags": ["React", "Firebase", "TypeScript"]
-  },
-  {
     "title": "My Portfolio",
     "description": "現在閲覧されているこのサイトです。AstroとTailwind CSSを使用し、爆速なパフォーマンスを実現。",
     "image": "https://placehold.co/600x400/10b981/white?text=Portfolio",
     "url": "https://github.com/yourname/portfolio",
     "tags": ["Astro", "Tailwind CSS"]
+  },
+  {
+    "title": "文字数カウンター",
+    "description": "あひるでかわいく文字数カウンターを作成 #1日1アプリ",
+    "image": "https://qiita-user-contents.imgix.net/https%3A%2F%2Fqiita-image-store.s3.ap-northeast-1.amazonaws.com%2F0%2F4229608%2F50ceeacb-731c-407a-bd15-fe0e2a040f12.png?ixlib=rb-4.0.0&auto=format&gif-q=60&q=75&w=1400&fit=max&s=0f8e0861bfc71d4c488e6cdedab8155e",
+    "url": "https://duck-ahiru-z.github.io/counter/",
+    "tags": ["HTML", "CSS", "JavaScript"]
+  },
+
+
+
+
+
+
+  
+  {
+    "title": "みかん・アイ",
+    "description": "みかんの画像からみかんのおいしさを検出するシステムです。審査員特別賞を受賞しました。はじめてのシステムです。",
+    "image": "https://placehold.co/600x400/2563eb/white?text=mikan.AI",
+    "url": "",
+    "tags": ["HTML", "CSS", "JavaScript", "Python"]
   }
 ]
