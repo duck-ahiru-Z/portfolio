@@ -7,19 +7,68 @@
     "tags": ["Astro", "Tailwind CSS"]
   },
   {
+    "title": "数式入力表示システム",
+    "description": "簡単に数式入力ができます。 #1日1アプリ",
+    "image": "https://qiita-user-contents.imgix.net/https%3A%2F%2Fqiita-image-store.s3.ap-northeast-1.amazonaws.com%2F0%2F4229608%2F385c4681-b14d-4274-8dd3-59ab305ae034.png?ixlib=rb-4.0.0&auto=format&gif-q=60&q=75&w=1400&fit=max&s=72bcf4e613290eb5793ab35f4ce7bdee",
+    "url": "https://duck-ahiru-z.github.io/math/",
+    "tags": ["HTML", "CSS", "JavaScript"]
+  }, 
+  {
+    "title": "偽クレジットカード番号生成器,
+    "description": "クレジットカード番号を生成してくれます。これで怪しいサイトも登録可能です。 #1日1アプリ",
+    "image": "https://qiita-user-contents.imgix.net/https%3A%2F%2Fqiita-image-store.s3.ap-northeast-1.amazonaws.com%2F0%2F4229608%2Fd1d710f8-ab7b-4a41-bc50-9b39260a658c.png?ixlib=rb-4.0.0&auto=format&gif-q=60&q=75&w=1400&fit=max&s=e2371b83aa5858985f788143a2e78186",
+    "url": "https://duck-ahiru-z.github.io/credit/",
+    "tags": ["HTML", "CSS", "JavaScript"]
+  }, 
+  {
+    "title": "QRコード解析君",
+    "description": "QRコードを理論に基づいて解析して読み取ってくれます。 #1日1アプリ",
+    "image": "https://qiita-user-contents.imgix.net/https%3A%2F%2Fqiita-image-store.s3.ap-northeast-1.amazonaws.com%2F0%2F4229608%2F51570432-16a9-45c4-bef8-849b1236c11f.png?ixlib=rb-4.0.0&auto=format&gif-q=60&q=75&w=1400&fit=max&s=21ac222e70216a6f58c48c99a2f8d081",
+    "url": "https://duck-ahiru-z.github.io/qr/",
+    "tags": ["HTML", "CSS", "JavaScript"]
+  }, 
+  {
+    "title": "あひるフォント変換",
+    "description": "フォント変換をしてくれます。実際には似たような文字に変換している感じですが… #1日1アプリ",
+    "image": "https://qiita-user-contents.imgix.net/https%3A%2F%2Fqiita-image-store.s3.ap-northeast-1.amazonaws.com%2F0%2F4229608%2F7ca306ba-e8e0-4437-8b39-eebf9e1d8bbf.png?ixlib=rb-4.0.0&auto=format&gif-q=60&q=75&w=1400&fit=max&s=d6b7e3f84cbdc6781841c4ce6caabb7e",
+    "url": "https://duck-ahiru-z.github.io/font/",
+    "tags": ["HTML", "CSS", "JavaScript"]
+  }, 
+  {
+    "title": "あひるタイピングゲーム",
+    "description": "あひるのタイピングゲームです。ぜひ高いスコア取ってみてください #1日1アプリ",
+    "image": "https://qiita-user-contents.imgix.net/https%3A%2F%2Fqiita-image-store.s3.ap-northeast-1.amazonaws.com%2F0%2F4229608%2F71c72cea-f501-4ab2-9015-0a219ac527f2.png?ixlib=rb-4.0.0&auto=format&gif-q=60&q=75&w=1400&fit=max&s=6e99a0fcd1a5c740dd6175b4cfbf85f2",
+    "url": "https://duck-ahiru-z.github.io/typing/",
+    "tags": ["HTML", "CSS", "JavaScript"]
+  },
+  {
+    "title": "今年終わるまであとどれくらい？",
+    "description": "今年はあとどれくらいで終わるのかを教えてくれます。 #1日1アプリ",
+    "image": "https://qiita-user-contents.imgix.net/https%3A%2F%2Fqiita-image-store.s3.ap-northeast-1.amazonaws.com%2F0%2F4229608%2Fca2b4569-66ee-4852-bda6-cffdab95708d.png?ixlib=rb-4.0.0&auto=format&gif-q=60&q=75&w=1400&fit=max&s=acb4acd545f31d5ac99571c6db686351",
+    "url": "https://duck-ahiru-z.github.io/countdown/",
+    "tags": ["HTML", "CSS", "JavaScript"]
+  },
+  {
+    "title": "パスワード生成器",
+    "description": "パスワードを生成してくれるツールです。 #1日1アプリ",
+    "image": "https://qiita-user-contents.imgix.net/https%3A%2F%2Fqiita-image-store.s3.ap-northeast-1.amazonaws.com%2F0%2F4229608%2F81922ceb-63f9-40f4-a13d-06de61e52139.png?ixlib=rb-4.0.0&auto=format&gif-q=60&q=75&w=1400&fit=max&s=322665c3de202b5f2b37032cf9ebbca9",
+    "url": "https://duck-ahiru-z.github.io/pass/",
+    "tags": ["HTML", "CSS", "JavaScript"]
+  },
+  {
+    "title": "句読点変換器",
+    "description": "「、」「。」を「，」「．」に変換してくれるツールです。 #1日1アプリ",
+    "image": "https://qiita-user-contents.imgix.net/https%3A%2F%2Fqiita-image-store.s3.ap-northeast-1.amazonaws.com%2F0%2F4229608%2F799070a0-bc72-47a8-9d94-f7dc43e46ef7.png?ixlib=rb-4.0.0&auto=format&gif-q=60&q=75&w=1400&fit=max&s=b20b42a207d9f25ded2b4f364350d9e7",
+    "url": "https://duck-ahiru-z.github.io/punctuation/",
+    "tags": ["HTML", "CSS", "JavaScript"]
+  },
+  {
     "title": "文字数カウンター",
     "description": "あひるでかわいく文字数カウンターを作成 #1日1アプリ",
     "image": "https://qiita-user-contents.imgix.net/https%3A%2F%2Fqiita-image-store.s3.ap-northeast-1.amazonaws.com%2F0%2F4229608%2F50ceeacb-731c-407a-bd15-fe0e2a040f12.png?ixlib=rb-4.0.0&auto=format&gif-q=60&q=75&w=1400&fit=max&s=0f8e0861bfc71d4c488e6cdedab8155e",
     "url": "https://duck-ahiru-z.github.io/counter/",
     "tags": ["HTML", "CSS", "JavaScript"]
-  },
-
-
-
-
-
-
-  
+  }, 
   {
     "title": "みかん・アイ",
     "description": "みかんの画像からみかんのおいしさを検出するシステムです。審査員特別賞を受賞しました。はじめてのシステムです。",
@@ -28,4 +77,5 @@
     "tags": ["HTML", "CSS", "JavaScript", "Python"]
   }
 ]
+
 
