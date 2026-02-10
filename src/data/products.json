@@ -2,14 +2,14 @@
   {
     "title": "My Portfolio",
     "description": "現在閲覧されているこのサイトです。AstroとTailwind CSSを使用し、爆速なパフォーマンスを実現。",
-    "image": "https://placehold.co/600x400/10b981/white?text=Portfolio",
+    "image": "https://placehold.co/600x400/2563eb/white?text=Portfolio,
     "url": "https://duck-ahiru-z.github.io/portfolio/",
     "tags": ["Astro", "Tailwind CSS"]
   },
   {
     "title": "英訳添削システム",
     "description": "受験生向けの英訳添削システムです。ただ、あんまり使わないでほしいかも。制限ないせいでお金が減っちゃいます。",
-    "image": "https://placehold.co/600x400/F58220/white?text=tensaku",
+    "image": "https://placehold.jp/0d9488/ffffff/400x600.png?text=英訳添削",
     "url": "https://hidariude.streamlit.app/",
     "tags": ["Python", "Streamlit"]
   }, 
@@ -79,11 +79,12 @@
   {
     "title": "みかん・アイ",
     "description": "みかんの画像からみかんのおいしさを検出するシステムです。審査員特別賞を受賞しました。はじめてのシステムです。",
-    "image": "https://placehold.co/600x400/2563eb/white?text=mikan.AI",
+    "image": "https://placehold.jp/f97316/ffffff/400x600.png?text=みかん・アイ"",
     "url": "https://github.com/duck-ahiru-Z/mikan-ai",
     "tags": ["HTML", "CSS", "JavaScript", "Python", "Flask"]
   }
 ]
+
 
 
 
