@@ -13,6 +13,13 @@
     "url": "https://hidariude.streamlit.app/",
     "tags": ["Python", "Streamlit"]
   }, 
+   {
+    "title": "傾斜配点システム",
+    "description": "受験生向けの傾斜配点判定システムです。",
+    "image": "https://placehold.jp/FFCC33/ffffff/400x600.png?text=傾斜配点",
+    "url": "https://duck-ahiru-z.github.io/kyoutego/",
+    "tags": ["HTML", "CSS", "JavaScript"]
+  }, 
   {
     "title": "数式入力表示システム",
     "description": "簡単に数式入力ができます。 #1日1アプリ",
@@ -84,6 +91,7 @@
     "tags": ["HTML", "CSS", "JavaScript", "Python", "Flask"]
   }
 ]
+
 
 
 
