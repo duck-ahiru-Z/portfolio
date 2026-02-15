@@ -1,5 +1,12 @@
 [
   {
+    "title": "逆張りバレンタイン",
+    "description": "生成AIハッカソン in 大阪 で作成したゲームです。キャラクターの性格をかなり正確に出力してくれます。",
+    "image": "https://placehold.jp/6c3524/ffffff/400x600.png?text=逆張りバレンタイン",
+    "url": "https://revalentine.streamlit.app/",
+    "tags": ["Python", "Streamlit"]
+  },
+  {
     "title": "My Portfolio",
     "description": "現在閲覧されているこのサイトです。AstroとTailwind CSSを使用し、爆速なパフォーマンスを実現。",
     "image": "https://placehold.co/600x400/2563eb/white?text=Portfolio",
@@ -91,6 +98,7 @@
     "tags": ["HTML", "CSS", "JavaScript", "Python", "Flask"]
   }
 ]
+
 
 
 
