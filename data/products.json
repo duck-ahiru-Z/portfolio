@@ -1,5 +1,17 @@
 [
   {
+    "isFeatured": false,
+    "date": "2026.07",
+    "title": "新ポートフォリオサイト",
+    "shortDescription": "新しいポートフォリオサイト、多くの情報を集約",
+    "detailedDescription": "今回のポートフォリオサイトはHTML/CSS/JSで作成。今までのポートフォリオサイトも気に入っていましたが、いくつかのバグと情報量の少なさから作り直しました。",
+    "behindTheScenes": "前回のポートフォリオサイトもですが、保守運用とポートフォリオサイトという独自性を重視しています。また、定期的に更新することで最新情報を掲載しています。",
+    "image": "",
+    "productUrl": "https://duck-ahiru-z.github.io/portfolio/",
+    "githubUrl": "https://github.com/duck-ahiru-Z/portfolio",
+    "tags": ["HTML", "CSS", "JavaScript", "JSON"]
+  },
+  {
     "isFeatured": true,
     "date": "2026.06",
     "title": "G-end",
@@ -18,7 +30,7 @@
     "shortDescription": "Gitの操作手順をラーメン作りの工程になぞらえて学べる学習用Webタイピングゲーム。",
     "detailedDescription": "ハッカソンで「Git操作に慣れない初心者が、概念を直感的に覚えられる学習ツール」として開発したシステム。Gitの「commit」や「push」を具材トッピングや調理・提供に見立てて、コマンドの動作イメージを学びます。【技育CAMP2026】ハッカソン Vol.1 優秀賞を受賞し、技育博2026 vol.1にも出展しました。",
     "behindTheScenes": "開発期間中、メンバー全員で深夜に作業しました。Gitコマンドの整合性をラーメンのレシピに正確にマッピングする状態遷移ロジックの構築に頭を悩ませ、リーダーは36時間コーディングしていました。すごい…",
-    "image": "https://placehold.jp/f7efe0/ffffff/400x600.png?text=ぎっとぎとラーメン",
+    "image": "/img/product/gitgitramen.png",
     "productUrl": "https://gitramen.com/",
     "githubUrl": "https://github.com/yozure420/gitRamen",
     "tags": ["React", "TypeScript", "SQLite", "FastAPI"]
@@ -54,7 +66,7 @@
     "shortDescription": "みかんの外観画像から内部のおいしさを画像認識で自動検出するシステム。",
     "detailedDescription": "和歌山県のDXフェスプログラミングコンテストにて審査員特別賞を受賞した、自身のエンジニアとしてのスタートとなった最初の本格的な開発システム。みかんの外皮のしわ、油胞の細かさ、色を画像認識AIで解析し、おいしさを判定します。",
     "behindTheScenes": "初めての本格的なシステム開発で、最初は画像入力後のエラーを解消できず何度も心が折れかけました。スーパーのみかんや似たものを買い、みかん以外のものを弾くようにたくさんの実験を行いました。ベテラン農家モードというユーモアなモードがデモでウケていました。",
-    "image": "https://placehold.jp/f97316/ffffff/400x600.png?text=みかん・アイ",
+    "image": "/img/product/mikanai.png",
     "productUrl": "",
     "githubUrl": "https://github.com/duck-ahiru-Z/mikan-ai",
     "tags": ["HTML", "CSS", "JavaScript", "Python", "Flask", "Gemini API"]
