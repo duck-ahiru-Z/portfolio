@@ -1,0 +1,27 @@
+[
+  {
+    "name": "GitHub",
+    "url": "https://github.com/duck-ahiru-Z/",
+    "description": "自作プロダクトのソースコード一覧"
+  },
+  {
+    "name": "X (formerly Twitter)",
+    "url": "https://x.com/duck_ahiru_Z",
+    "description": "日々の開発ログや進捗発信"
+  },
+  {
+    "name": "Qiita",
+    "url": "https://qiita.com/duck_ahiru_Z",
+    "description": "ちょっとした技術の情報発信"
+  },
+  {
+    "name": "AtCoder",
+    "url": "https://atcoder.jp/users/duckahiruZ",
+    "description": "毎週ABCコンテスト参加中"
+  },
+  {
+    "name": "Note",
+    "url": "https://note.com/duck_ahiru_z",
+    "description": "あまり触ってないかも…"
+  }
+]

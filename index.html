@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PORTFOLIO | Prototype</title>
+  
+  <!-- Noto Sans JP フォントの読み込み -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+  
+  <!-- marked.js CDN (Markdownパーサー、自己紹介のモーダルパース用) -->
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  
+  <!-- 共通スタイルシート -->
+  <link rel="stylesheet" href="./style.css">
+  
+  <!-- 制御ロジックJavaScript (データは非同期fetchで読み込むため個別のJSタグは不要) -->
+  <script src="./script.js" defer></script>
+</head>
+<body>
+
+  <!-- ヘッダー / 固定ナビゲーション -->
+  <header class="header">
+    <div class="header-container">
+      <a href="#" class="logo">PORTFOLIO</a>
+      <nav class="nav">
+        <a href="#hero" class="nav-link">Home</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#products" class="nav-link">Products</a>
+        <a href="#awards" class="nav-link">Awards</a>
+        <a href="#activities" class="nav-link">News & Activities</a>
+        <a href="#reading" class="nav-link">Reading</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- メインコンテンツ -->
+  <main id="main-container" class="main container">
+    
+    <!-- 1. Hero Section -->
+    <section id="hero" class="hero-section text-center">
+      <div class="hero-avatar-wrapper">
+        <img id="hero-avatar-img" src="./data/207364.jpg" alt="Avatar" class="hero-avatar" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+        <svg class="avatar-svg-placeholder" viewBox="0 0 100 100" style="display:none; width: 100%; height: 100%; stroke: var(--border-color-dark); stroke-width: 2.5; fill: none;">
+          <!-- 可愛いワイヤーフレーム調アヒル -->
+          <circle cx="50" cy="35" r="14" fill="#ffffff" />
+          <circle cx="54" cy="32" r="2" fill="var(--border-color-dark)" />
+          <polygon points="64,33 72,36 64,40" fill="#ffffff" />
+          <ellipse cx="45" cy="62" rx="22" ry="14" fill="#ffffff" />
+          <ellipse cx="40" cy="62" rx="10" ry="6" fill="#ffffff" />
+          <line x1="40" y1="76" x2="40" y2="84" />
+          <line x1="50" y1="76" x2="50" y2="84" />
+        </svg>
+      </div>
+      <h1 id="hero-title" class="hero-title">Loading...</h1>
+      <p id="hero-subtitle" class="hero-subtitle"></p>
+    </section>
+
+    <!-- 2. About Me Section -->
+    <section id="about" class="section">
+      <div class="section-header">
+        <h2 class="section-title">About Me</h2>
+      </div>
+      <div class="neo-paper">
+        <div class="profile-summary">
+          <p id="profile-affiliation" class="profile-affiliation"><strong>所属:</strong> Loading...</p>
+          <p id="profile-group" class="profile-group"><strong>所属団体:</strong> Loading...</p>
+          <p id="profile-summary" class="profile-text" style="margin-top: 1rem;"></p>
+        </div>
+        <button id="about-detail-btn" class="card-btn" style="margin-top: 1.5rem; max-width: 240px;">詳細な自己紹介を見る &rarr;</button>
+      </div>
+    </section>
+
+    <!-- 3. Products Section (ソートトグルボタン、表示列数、タグフィルター) -->
+    <section id="products" class="section">
+      <div class="section-header">
+        <div class="title-area">
+          <h2 class="section-title">Products</h2>
+          <button id="toggle-products-btn" class="section-toggle-link">[ すべて表示 (全19件) ]</button>
+        </div>
+        <div class="selector-wrapper">
+          <button id="sort-products-btn" class="neo-select" style="padding: 0.15rem 0.5rem; font-size: 0.72rem;">新しい順 &darr;</button>
+          <label for="products-col-select" class="select-label">表示列数:</label>
+          <select id="products-col-select" class="neo-select">
+            <option value="1">1列</option>
+            <option value="2">2列</option>
+            <option value="3">3列</option>
+            <option value="4">4列</option>
+          </select>
+        </div>
+      </div>
+      
+      <!-- 動的な技術タグフィルターチップ用コンテナ -->
+      <div id="products-filter-container" class="filter-container">
+        <!-- JSでタグを自動抽出して描画 -->
+      </div>
+
+      <!-- 主要実績表示コンテナ -->
+      <div id="products-featured-grid" class="grid"></div>
+
+      <!-- 残りの全実績表示コンテナ -->
+      <div id="products-expanded-grid" class="grid" style="display: none; margin-top: 1.5rem;"></div>
+    </section>
+
+    <!-- 4. Awards Section (開閉トグル ＆ 日付ソート) -->
+    <section id="awards" class="section">
+      <div class="section-header">
+        <div class="title-area">
+          <h2 class="section-title">Awards</h2>
+          <button id="toggle-awards-btn" class="section-toggle-link">[ すべて表示 (全6件) ]</button>
+        </div>
+        <div class="selector-wrapper">
+          <button id="sort-awards-btn" class="neo-select" style="padding: 0.15rem 0.5rem; font-size: 0.72rem;">新しい順 &darr;</button>
+        </div>
+      </div>
+      
+      <!-- 主要実績表示コンテナ -->
+      <div id="awards-featured-list" class="list"></div>
+
+      <!-- 残りの全実績表示コンテナ -->
+      <div id="awards-expanded-list" class="list" style="display: none; margin-top: 1rem;"></div>
+    </section>
+
+    <!-- 5. Activities Section (News & Activities に改名、開閉トグル ＆ 日付ソート) -->
+    <section id="activities" class="section">
+      <div class="section-header">
+        <div class="title-area">
+          <h2 class="section-title">News & Activities</h2>
+          <button id="toggle-activities-btn" class="section-toggle-link">[ すべて表示 (全8件) ]</button>
+        </div>
+        <div class="selector-wrapper">
+          <button id="sort-activities-btn" class="neo-select" style="padding: 0.15rem 0.5rem; font-size: 0.72rem;">新しい順 &darr;</button>
+        </div>
+      </div>
+      
+      <!-- 主要実績表示コンテナ -->
+      <div id="activities-featured-list" class="list"></div>
+
+      <!-- 残りの全実績表示コンテナ -->
+      <div id="activities-expanded-list" class="list" style="display: none; margin-top: 1rem;"></div>
+    </section>
+
+    <!-- 6. Reading List Section -->
+    <section id="reading" class="section">
+      <div class="section-header">
+        <h2 class="section-title">Reading List</h2>
+        <div class="selector-wrapper">
+          <label for="reading-col-select" class="select-label">表示列数:</label>
+          <select id="reading-col-select" class="neo-select">
+            <option value="1">1列</option>
+            <option value="2">2列</option>
+            <option value="3">3列</option>
+            <option value="4">4列</option>
+            <option value="5">5列</option>
+          </select>
+        </div>
+      </div>
+      <div id="reading-grid" class="books-grid">
+        <!-- JSで書籍リストを描画 -->
+      </div>
+    </section>
+
+    <!-- 8. Links & Certifications Section -->
+    <section id="links-certs" class="section">
+      <div class="links-certs-grid">
+        <!-- 資格一覧 -->
+        <div class="neo-paper">
+          <h3 class="subsection-title">資格一覧 (Certifications)</h3>
+          <ul id="certifications-container" class="certifications-list">
+            <!-- JSで資格リストを描画 -->
+          </ul>
+        </div>
+        <!-- リンク一覧 -->
+        <div class="neo-paper">
+          <h3 class="subsection-title">リンク一覧 (Links)</h3>
+          <ul id="links-container" class="links-list">
+            <!-- JSでリンク一覧を描画 -->
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- 9. Contact Section (スパム対策バインド型) -->
+    <section id="contact" class="section">
+      <div class="section-header">
+        <h2 class="section-title">Contact</h2>
+      </div>
+      <div class="neo-paper text-center" style="text-align: center; padding: 3rem 1.5rem;">
+        <p style="font-size: 1rem; margin-bottom: 1.5rem; color: var(--text-muted);">
+          お仕事のご相談、共同開発のお誘い、またはインターンシップや技術的な対談に関するご連絡は、下記メールアドレスまでお願いいたします。
+        </p>
+        <!-- メールアドレス表示 (スパム対策のためのクリック不可テキスト) -->
+        <div id="contact-email" class="contact-email-display">
+          Loading...
+        </div>
+        <p id="contact-note" style="font-size: 0.8rem; margin-top: 1.2rem; color: var(--text-muted); font-style: italic;"></p>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- フッター -->
+  <footer class="footer">
+    <div class="container footer-container">
+      <p>&copy; 2026 Portfolio. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- 統合ダイアログモーダル -->
+  <dialog id="unified-modal" class="modal">
+    <div class="modal-box">
+      <button id="modal-close-btn" class="modal-close" aria-label="閉じる">&times;</button>
+      <div id="modal-content" class="modal-content">
+        <!-- JSで動的に詳細やMarkdownを差し替え -->
+      </div>
+    </div>
+  </dialog>
+
+</body>
+</html>
