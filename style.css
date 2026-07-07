@@ -319,11 +319,12 @@ input, select, textarea, button {
   border: 2px solid var(--border-color-dark);
   overflow: hidden;
   background-color: var(--bg-color);
-  margin-bottom: 1.2rem;
+  margin: 0 auto 1.2rem auto; /* 左右マージンをautoにして確実に完全中央寄せにする */
   display: flex;
   align-items: center;
   justify-content: center;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  flex-shrink: 0; /* フレックス縮小・潰れ防止 */
 }
 
 .hero-avatar {
