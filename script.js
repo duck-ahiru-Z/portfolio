@@ -626,4 +626,243 @@ document.addEventListener('DOMContentLoaded', () => {
       linksContainer.appendChild(li);
     });
   }
+
+  // ==========================================================================
+  // ⑧ 物理演算シミュレーションエンジン (Google Gravity / Space)
+  // ==========================================================================
+  let physicsActive = false;
+  let physicsMode = null; // 'gravity' | 'space'
+  let physicsElements = [];
+  let physicsAnimFrame = null;
+  let activeDragItem = null;
+
+  // マウス/タッチ座標の追跡
+  let mouseX = 0;
+  let mouseY = 0;
+  window.addEventListener('mousemove', (e) => {
+    mouseX = e.clientX;
+    mouseY = e.clientY;
+  });
+  window.addEventListener('touchmove', (e) => {
+    if (e.touches.length > 0) {
+      mouseX = e.touches[0].clientX;
+      mouseY = e.touches[0].clientY;
+    }
+  });
+
+  const gravityBtn = document.getElementById('gravity-btn');
+  const spaceBtn = document.getElementById('space-btn');
+  const resetPhysicsBtn = document.getElementById('reset-physics-btn');
+
+  if (gravityBtn && spaceBtn && resetPhysicsBtn) {
+    gravityBtn.addEventListener('click', () => startPhysics('gravity'));
+    spaceBtn.addEventListener('click', () => startPhysics('space'));
+    resetPhysicsBtn.addEventListener('click', () => stopPhysics());
+  }
+
+  function startPhysics(mode) {
+    if (physicsActive) {
+      if (physicsMode === mode) return;
+      physicsMode = mode;
+      physicsElements.forEach(item => {
+        if (mode === 'space') {
+          item.vx = (Math.random() - 0.5) * 8;
+          item.vy = (Math.random() - 0.5) * 8;
+        } else {
+          item.vx = 0;
+          item.vy = 0;
+        }
+      });
+      return;
+    }
+
+    physicsActive = true;
+    physicsMode = mode;
+    resetPhysicsBtn.style.display = 'inline-block';
+    document.body.classList.add('physics-active');
+
+    // 物理オブジェクト化するターゲット要素を全抽出
+    const selectors = [
+      'h1', 'h2', 'h3', 'p', 'a:not(.logo):not(.nav-link)',
+      '.neo-paper', '.book-card', '.certifications-list li', '.links-list li',
+      '.nav-link', '.logo', 'select', 'button:not(.neo-select)'
+    ];
+    const rawTargets = [];
+    selectors.forEach(sel => {
+      document.querySelectorAll(sel).forEach(el => {
+        if (!el.closest('.physics-controls') && !el.closest('#unified-modal')) {
+          rawTargets.push(el);
+        }
+      });
+    });
+
+    physicsElements = [];
+    
+    rawTargets.forEach(el => {
+      const rect = el.getBoundingClientRect();
+      
+      const item = {
+        el: el,
+        origPosition: el.style.position || '',
+        origLeft: el.style.left || '',
+        origTop: el.style.top || '',
+        origWidth: el.style.width || '',
+        origHeight: el.style.height || '',
+        origMargin: el.style.margin || '',
+        origTransform: el.style.transform || '',
+        
+        x: rect.left,
+        y: rect.top,
+        width: rect.width,
+        height: rect.height,
+        vx: mode === 'space' ? (Math.random() - 0.5) * 8 : 0,
+        vy: mode === 'space' ? (Math.random() - 0.5) * 8 : 0,
+        isDragging: false,
+        lastX: rect.left,
+        lastY: rect.top,
+        offsetX: 0,
+        offsetY: 0
+      };
+
+      physicsElements.push(item);
+    });
+
+    // スタイル一括適用（レイアウト崩れ防止）
+    physicsElements.forEach(item => {
+      item.el.style.width = `${item.width}px`;
+      item.el.style.height = `${item.height}px`;
+      item.el.style.left = `${item.x}px`;
+      item.el.style.top = `${item.y}px`;
+      item.el.classList.add('physics-obj');
+      
+      setupDragEvents(item);
+    });
+
+    physicsAnimFrame = requestAnimationFrame(updatePhysics);
+  }
+
+  function setupDragEvents(item) {
+    const onStart = (clientX, clientY) => {
+      if (!physicsActive) return;
+      item.isDragging = true;
+      activeDragItem = item;
+      const rect = item.el.getBoundingClientRect();
+      item.offsetX = clientX - rect.left;
+      item.offsetY = clientY - rect.top;
+      item.lastX = rect.left;
+      item.lastY = rect.top;
+      item.vx = 0;
+      item.vy = 0;
+    };
+
+    item.el.addEventListener('mousedown', (e) => {
+      e.preventDefault();
+      onStart(e.clientX, e.clientY);
+    });
+
+    item.el.addEventListener('touchstart', (e) => {
+      if (e.touches.length > 0) {
+        onStart(e.touches[0].clientX, e.touches[0].clientY);
+      }
+    }, { passive: true });
+  }
+
+  window.addEventListener('mouseup', () => {
+    if (activeDragItem) {
+      activeDragItem.isDragging = false;
+      activeDragItem = null;
+    }
+  });
+
+  window.addEventListener('touchend', () => {
+    if (activeDragItem) {
+      activeDragItem.isDragging = false;
+      activeDragItem = null;
+    }
+  });
+
+  function updatePhysics() {
+    if (!physicsActive) return;
+
+    const g = 0.55;       
+    const airResistance = 0.985; 
+    const bounce = 0.55;  
+
+    physicsElements.forEach(item => {
+      if (item.isDragging) {
+        item.x = mouseX - item.offsetX;
+        item.y = mouseY - item.offsetY;
+        item.vx = (item.x - item.lastX) * 0.8;
+        item.vy = (item.y - item.lastY) * 0.8;
+        item.lastX = item.x;
+        item.lastY = item.y;
+      } else {
+        if (physicsMode === 'gravity') {
+          item.vy += g;
+        }
+
+        item.vx *= airResistance;
+        item.vy *= airResistance;
+        item.x += item.vx;
+        item.y += item.vy;
+
+        const floor = window.innerHeight - item.height;
+        if (item.y > floor) {
+          item.y = floor;
+          item.vy = -item.vy * bounce;
+          item.vx *= 0.75; 
+        } else if (item.y < 0) {
+          item.y = 0;
+          item.vy = -item.vy * bounce;
+        }
+
+        const wallRight = window.innerWidth - item.width;
+        if (item.x > wallRight) {
+          item.x = wallRight;
+          item.vx = -item.vx * bounce;
+        } else if (item.x < 0) {
+          item.x = 0;
+          item.vx = -item.vx * bounce;
+        }
+      }
+
+      item.el.style.left = `${item.x}px`;
+      item.el.style.top = `${item.y}px`;
+    });
+
+    physicsAnimFrame = requestAnimationFrame(updatePhysics);
+  }
+
+  function stopPhysics() {
+    if (!physicsActive) return;
+    physicsActive = false;
+    cancelAnimationFrame(physicsAnimFrame);
+    resetPhysicsBtn.style.display = 'none';
+
+    document.body.classList.remove('physics-active');
+
+    physicsElements.forEach(item => {
+      item.el.classList.add('physics-returning');
+      item.el.style.left = '';
+      item.el.style.top = '';
+      item.el.style.width = '';
+      item.el.style.height = '';
+      item.el.style.transform = '';
+    });
+
+    setTimeout(() => {
+      physicsElements.forEach(item => {
+        item.el.classList.remove('physics-obj');
+        item.el.classList.remove('physics-returning');
+        item.el.style.position = item.origPosition;
+        item.el.style.left = item.origLeft;
+        item.el.style.top = item.origTop;
+        item.el.style.width = item.origWidth;
+        item.el.style.height = item.origHeight;
+        item.el.style.margin = item.origMargin;
+        item.el.style.transform = item.origTransform;
+      });
+      physicsElements = [];
+    }, 600);
+  }
 });
