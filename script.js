@@ -266,22 +266,20 @@ document.addEventListener('DOMContentLoaded', () => {
       if (activeFilter === 'All') {
         toggleLink.style.display = 'inline-block';
 
-        // Featuredプロダクトの描画 (ソート順にのっとり、かつ Featured であるもの)
-        const featured = sortedProducts.filter(p => p.isFeatured);
-        featured.forEach(p => featuredGrid.appendChild(createProductCard(p)));
-
-        // Expandedプロダクトの描画
         if (isExpanded) {
-          const nonFeatured = sortedProducts.filter(p => !p.isFeatured);
-          nonFeatured.forEach(p => expandedGrid.appendChild(createProductCard(p)));
-          expandedGrid.style.display = 'grid';
+          // すべて表示時: 全商品を区別なくソート順で1つのグリッドに描画
+          sortedProducts.forEach(p => featuredGrid.appendChild(createProductCard(p)));
+          expandedGrid.style.display = 'none';
           toggleLink.textContent = `[ 閉じる ]`;
         } else {
+          // 閉じている時: Featuredのみをソート順で描画
+          const featured = sortedProducts.filter(p => p.isFeatured);
+          featured.forEach(p => featuredGrid.appendChild(createProductCard(p)));
           expandedGrid.style.display = 'none';
           toggleLink.textContent = `[ すべて表示 (全${products.length}件) ]`;
         }
       } else {
-        // フィルター適用時: トグルリンクと拡張グリッドは隠し、該当タグの全作品をソート順で描画
+        // フィルター適用時: 該当タグの全作品をソート順で描画
         toggleLink.style.display = 'none';
         expandedGrid.style.display = 'none';
 
@@ -334,17 +332,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
       const sortedAwards = sortData(awards, sortOrder);
 
-      // Featured受賞歴を描画
-      const featured = sortedAwards.filter(a => a.isFeatured);
-      featured.forEach(a => featuredContainer.appendChild(createAwardItem(a)));
-
       if (isExpanded) {
-        // 残り（Expanded）受賞歴を描画
-        const nonFeatured = sortedAwards.filter(a => !a.isFeatured);
-        nonFeatured.forEach(a => expandedContainer.appendChild(createAwardItem(a)));
-        expandedContainer.style.display = 'flex';
+        // すべて表示時: 全受賞歴を区別なくソート順で1つのリストに描画
+        sortedAwards.forEach(a => featuredContainer.appendChild(createAwardItem(a)));
+        expandedContainer.style.display = 'none';
         toggleLink.textContent = `[ 閉じる ]`;
       } else {
+        // 閉じている時: Featuredのみをソート順で描画
+        const featured = sortedAwards.filter(a => a.isFeatured);
+        featured.forEach(a => featuredContainer.appendChild(createAwardItem(a)));
         expandedContainer.style.display = 'none';
         toggleLink.textContent = `[ すべて表示 (全${awards.length}件) ]`;
       }
@@ -392,17 +388,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
       const sortedActivities = sortData(activities, sortOrder);
 
-      // Featured活動歴を描画
-      const featured = sortedActivities.filter(act => act.isFeatured);
-      featured.forEach(act => featuredContainer.appendChild(createActivityItem(act)));
-
       if (isExpanded) {
-        // 残り（Expanded）活動歴を描画
-        const nonFeatured = sortedActivities.filter(act => !act.isFeatured);
-        nonFeatured.forEach(act => expandedContainer.appendChild(createActivityItem(act)));
-        expandedContainer.style.display = 'flex';
+        // すべて表示時: 全活動歴を区別なくソート順で1つのリストに描画
+        sortedActivities.forEach(act => featuredContainer.appendChild(createActivityItem(act)));
+        expandedContainer.style.display = 'none';
         toggleLink.textContent = `[ 閉じる ]`;
       } else {
+        // 閉じている時: Featuredのみをソート順で描画
+        const featured = sortedActivities.filter(act => act.isFeatured);
+        featured.forEach(act => featuredContainer.appendChild(createActivityItem(act)));
         expandedContainer.style.display = 'none';
         toggleLink.textContent = `[ すべて表示 (全${activities.length}件) ]`;
       }
