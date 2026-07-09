@@ -592,18 +592,15 @@ document.addEventListener('DOMContentLoaded', () => {
     if (!certsContainer) return;
 
     certsContainer.innerHTML = '';
-    certifications.forEach(cert => {
-      const li = document.createElement('li');
-      
-      const badgeHtml = cert.isAcquired 
-        ? `<span class="tag tag-favorite" style="font-size:0.65rem; margin-left:0.4rem; padding:0.1rem 0.3rem;">取得済</span>`
-        : `<span class="tag" style="font-size:0.65rem; margin-left:0.4rem; padding:0.1rem 0.3rem;">取得目標</span>`;
+    // isAcquired が true のものだけをフィルタリングして描画
+    const activeCerts = certifications.filter(cert => cert.isAcquired);
 
+    activeCerts.forEach(cert => {
+      const li = document.createElement('li');
       li.innerHTML = `
         <div>
           <span class="cert-date">${cert.date}</span>
           <span class="cert-title">${cert.title}</span>
-          ${badgeHtml}
         </div>
         ${cert.description ? `<p class="cert-desc">${cert.description}</p>` : ''}
       `;
