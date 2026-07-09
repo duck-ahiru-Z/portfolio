@@ -1,5 +1,17 @@
 [
   {
+    "isFeatured": true,
+    "date": "2026.07",
+    "title": "ショートカットキー検定",
+    "shortDescription": "ショートカットキー、使えてる？",
+    "detailedDescription": "ショートカットキー検定資格試験を作成してみました。完全無料のCBT方式試験となっています。ぜひチャレンジしてみては？",
+    "behindTheScenes": "なんと合格すると名前入りの合格証明書が発行されます。思ったよりめちゃくちゃ作るの大変でした。",
+    "image": "img/product/shortcutkeyexam.png",
+    "productUrl": "https://duck-ahiru-z.github.io/shortcutkey-exam/index.html",
+    "githubUrl": "https://github.com/duck-ahiru-Z/shortcutkey-exam",
+    "tags": ["HTML", "CSS", "JavaScript", "JSON"]
+  },
+  {
     "isFeatured": false,
     "date": "2026.07",
     "title": "新ポートフォリオサイト",
@@ -18,7 +30,7 @@
     "shortDescription": "虫（G）対策シミュレート・対策モバイルWebアプリケーション。",
     "detailedDescription": "遭遇した際に対処に困る「あの害虫」を素早く駆除・撃退するための知識共有と対策アプリ。【技育CAMP2026】ハッカソン Vol.3でサポーターズ賞をいただきました。",
     "behindTheScenes": "チーム内で『絶対に遭遇したくないもの』について議論した結果誕生しました。リアルな画像を表示するとユーザーが卒倒するため、モザイク処理やドット絵風のビジュアル表現を駆使して、視覚的に嫌悪感を与えないUI設計に最も苦労しました。",
-    "image": "https://placehold.jp/121212/ffffff/400x600.png?text=G-end",
+    "image": "img/product/gend.png",
     "productUrl": "https://g-end.vercel.app/",
     "githubUrl": "https://github.com/duck-ahiru-Z/mushi",
     "tags": ["Next.js", "React", "Tailwind CSS", "PWA", "Firebase"]
@@ -85,7 +97,7 @@
   },
   {
     "isFeatured": true,
-    "date": "2026.03",
+    "date": "2026.04",
     "title": "文字化けメモ超",
     "shortDescription": "入力したテキストを意図的に特定の文字コードへクラッシュさせ、文字化けのデコードロジックを学べるエディタツール。",
     "detailedDescription": "文字コードの文字化け（UTF-8 vs Shift-JISなど）の仕組みを体感的に学ぶための実験用テキストエディタ。",
