@@ -18,7 +18,7 @@
     "shortDescription": "新しいポートフォリオサイト、多くの情報を集約",
     "detailedDescription": "今回のポートフォリオサイトはHTML/CSS/JSで作成。今までのポートフォリオサイトも気に入っていましたが、いくつかのバグと情報量の少なさから作り直しました。",
     "behindTheScenes": "前回のポートフォリオサイトもですが、保守運用とポートフォリオサイトという独自性を重視しています。また、定期的に更新することで最新情報を掲載しています。",
-    "image": "",
+    "image": "https://placehold.co/600x400/2563eb/white?text=NEW Portfolio",
     "productUrl": "https://duck-ahiru-z.github.io/portfolio/",
     "githubUrl": "https://github.com/duck-ahiru-Z/portfolio",
     "tags": ["HTML", "CSS", "JavaScript", "JSON"]
