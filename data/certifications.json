@@ -1,5 +1,11 @@
 [
   {
+    "date": "2026.07",
+    "title": "ショートカットキー検定5級取得（満点）",
+    "description": "僕が運営するショートカットキー検定事務局の資格試験ですので、ある意味ずる？ですね。きちんと解いて満点でした。",
+    "isAcquired": false
+  },
+  {
     "date": "2026.04",
     "title": "Google AI Essentials 修了 (認定証・バッジ獲得)",
     "description": "Googleが提供するAI利活用プログラム。Introduction to AI, Maximize Productivity With AI Tools, Discover the Art of Prompting, Use AI Responsibly, Stay Ahead of the AI Curveの5つの専門分野をすべて修了しました。",
