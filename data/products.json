@@ -102,7 +102,7 @@
     "shortDescription": "入力したテキストを意図的に特定の文字コードへクラッシュさせ、文字化けのデコードロジックを学べるエディタツール。",
     "detailedDescription": "文字コードの文字化け（UTF-8 vs Shift-JISなど）の仕組みを体感的に学ぶための実験用テキストエディタ。",
     "behindTheScenes": "ただランダムに文字列を崩すのではなく、実際のバイナリ変換仕様にのっとって正確に文字化けさせています。よく見る文字化けを見ることができます。",
-    "image": "https://placehold.jp/ff0000/ffffff/400x600.png?text=文字化けメモ超",
+    "image": "img/product/mojibake.png",
     "productUrl": "https://duck-ahiru-z.github.io/memo/",
     "githubUrl": "https://github.com/duck-ahiru-z/memo",
     "tags": ["HTML", "CSS", "Vanilla JavaScript"]
