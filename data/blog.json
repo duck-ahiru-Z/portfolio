@@ -1,0 +1,23 @@
+[
+  {
+    "date": "2026.07",
+    "title": "Qiitaで技術記事を書き始める時のコツ",
+    "url": "https://qiita.com/",
+    "category": "Tech",
+    "isFeatured": true
+  },
+  {
+    "date": "2026.06",
+    "title": "ポートフォリオサイトをHTML/CSS/JSで再構築した話",
+    "url": "https://duck-ahiru-z.github.io/portfolio/",
+    "category": "Tech",
+    "isFeatured": true
+  },
+  {
+    "date": "2026.05",
+    "title": "Vanilla JSで軽量な物理シミュレーションを作るアプローチ",
+    "url": "https://qiita.com/",
+    "category": "JavaScript",
+    "isFeatured": false
+  }
+]

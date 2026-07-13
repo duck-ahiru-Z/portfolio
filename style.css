@@ -1124,3 +1124,59 @@ input, select, textarea, button {
     padding: 0.8rem 2rem;
   }
 }
+
+/* Blog Section styles */
+.blog-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.blog-item {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  border-bottom: 1px dashed var(--border-color);
+  padding-bottom: 0.8rem;
+  font-size: 0.95rem;
+}
+
+.blog-item:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.blog-date {
+  font-family: monospace;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  flex-shrink: 0;
+  min-width: 65px;
+}
+
+.blog-category {
+  font-size: 0.7rem;
+  padding: 0.1rem 0.4rem;
+  border: 1px solid var(--border-color-dark);
+  background-color: var(--bg-secondary);
+  color: var(--text-muted);
+  border-radius: 2px;
+  flex-shrink: 0;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.blog-title-link {
+  color: var(--text-color);
+  text-decoration: underline;
+  font-weight: 900;
+  transition: color 0.15s;
+  word-break: break-all;
+}
+
+.blog-title-link:hover {
+  color: var(--border-color-dark);
+}

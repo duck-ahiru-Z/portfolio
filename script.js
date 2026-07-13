@@ -104,15 +104,16 @@ document.addEventListener('DOMContentLoaded', () => {
     './data/activities.json',
     './data/reading.json',
     './data/certifications.json',
-    './data/links.json'
+    './data/links.json',
+    './data/blog.json'
   ];
 
   Promise.all(dataPaths.map(url => fetch(url).then(res => {
     if (!res.ok) throw new Error(`${url} のロードに失敗しました。`);
     return res.json();
   })))
-  .then(([profile, products, awards, activities, reading, certifications, links]) => {
-    initializePortfolio({ profile, products, awards, activities, reading, certifications, links });
+  .then(([profile, products, awards, activities, reading, certifications, links, blog]) => {
+    initializePortfolio({ profile, products, awards, activities, reading, certifications, links, blog });
   })
   .catch(error => {
     showErrorFallback(error.message);
@@ -201,6 +202,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // 4. Reading List Section
     renderReadingList(datasets.reading);
+
+    // 4.5 Blog Section
+    setupBlogSection(datasets.blog);
 
     // 5. Certifications Section
     renderCertifications(datasets.certifications);
@@ -422,6 +426,73 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     render();
+  }
+
+  // ==========================================================================
+  // ③.5 Blog Section Setup (アコーディオン ＆ 日付ソート)
+  // ==========================================================================
+  function setupBlogSection(blogs) {
+    const featuredContainer = document.getElementById('blog-featured-list');
+    const expandedContainer = document.getElementById('blog-expanded-list');
+    const toggleLink = document.getElementById('toggle-blog-btn');
+    const sortBtn = document.getElementById('sort-blog-btn');
+    const sectionElement = featuredContainer.closest('section');
+
+    if (!featuredContainer || !expandedContainer || !toggleLink) return;
+    let isExpanded = false;
+    let sortOrder = 'desc'; // デフォルト: 新しい順
+
+    const render = () => {
+      featuredContainer.innerHTML = '';
+      expandedContainer.innerHTML = '';
+
+      const sortedBlogs = sortData(blogs, sortOrder);
+
+      if (isExpanded) {
+        // すべて表示時: 全ブログを区別なくソート順で1つのリストに描画
+        sortedBlogs.forEach(b => featuredContainer.appendChild(createBlogItem(b)));
+        expandedContainer.style.display = 'none';
+        toggleLink.textContent = `[ 閉じる ]`;
+      } else {
+        // 閉じている時: Featuredのみをソート順で描画
+        const featured = sortedBlogs.filter(b => b.isFeatured);
+        featured.forEach(b => featuredContainer.appendChild(createBlogItem(b)));
+        expandedContainer.style.display = 'none';
+        toggleLink.textContent = `[ すべて表示 (全${blogs.length}件) ]`;
+      }
+    };
+
+    toggleLink.addEventListener('click', () => {
+      if (isExpanded) {
+        isExpanded = false;
+        render();
+        if (sectionElement) sectionElement.scrollIntoView({ behavior: 'smooth' });
+      } else {
+        isExpanded = true;
+        render();
+      }
+    });
+
+    if (sortBtn) {
+      sortBtn.addEventListener('click', () => {
+        sortOrder = sortOrder === 'desc' ? 'asc' : 'desc';
+        sortBtn.innerHTML = sortOrder === 'desc' ? '新しい順 &darr;' : '古い順 &uarr;';
+        render();
+      });
+    }
+
+    render();
+  }
+
+  function createBlogItem(blog) {
+    const li = document.createElement('li');
+    li.className = 'blog-item';
+    li.innerHTML = `
+      <span class="blog-date">${blog.date}</span>
+      ${blog.category ? `<span class="blog-category">${blog.category}</span>` : ''}
+      <a href="${blog.url}" target="_blank" rel="noopener noreferrer" class="blog-title-link">${blog.title}</a>
+    `;
+    return li;
   }
 
   // ==========================================================================

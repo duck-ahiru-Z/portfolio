@@ -32,6 +32,7 @@
         <a href="#awards" class="nav-link">Awards</a>
         <a href="#activities" class="nav-link">News & Activities</a>
         <a href="#reading" class="nav-link">Reading</a>
+        <a href="#blog" class="nav-link">Blog</a>
         <a href="#contact" class="nav-link">Contact</a>
       </nav>
     </div>
@@ -161,6 +162,25 @@
       <div id="reading-grid" class="books-grid">
         <!-- JSで書籍リストを描画 -->
       </div>
+    </section>
+
+    <!-- 7. Blog Section -->
+    <section id="blog" class="section">
+      <div class="section-header">
+        <div class="title-area">
+          <h2 class="section-title">Blog</h2>
+          <button id="toggle-blog-btn" class="section-toggle-link">[ すべて表示 (全0件) ]</button>
+        </div>
+        <div class="selector-wrapper">
+          <button id="sort-blog-btn" class="neo-select" style="padding: 0.15rem 0.5rem; font-size: 0.72rem;">新しい順 &darr;</button>
+        </div>
+      </div>
+      
+      <!-- 主要ブログ表示コンテナ -->
+      <div id="blog-featured-list" class="list"></div>
+
+      <!-- 残りの全ブログ表示コンテナ -->
+      <div id="blog-expanded-list" class="list" style="display: none; margin-top: 1rem;"></div>
     </section>
 
     <!-- 8. Links & Certifications Section -->
