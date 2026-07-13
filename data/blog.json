@@ -1,23 +1,16 @@
 [
   {
-    "date": "2026.07",
-    "title": "Qiitaで技術記事を書き始める時のコツ",
-    "url": "https://qiita.com/",
-    "category": "Tech",
-    "isFeatured": true
-  },
-  {
-    "date": "2026.06",
-    "title": "ポートフォリオサイトをHTML/CSS/JSで再構築した話",
-    "url": "https://duck-ahiru-z.github.io/portfolio/",
-    "category": "Tech",
-    "isFeatured": true
-  },
-  {
     "date": "2026.05",
-    "title": "Vanilla JSで軽量な物理シミュレーションを作るアプローチ",
-    "url": "https://qiita.com/",
-    "category": "JavaScript",
-    "isFeatured": false
+    "title": "1日に400回以上会話してる!? 大学生がPythonで自分のGemini利用履歴を全抽出して分析してみた話",
+    "url": "https://qiita.com/duck_ahiru_Z/items/277fdd06c98863c1c567",
+    "category": "Tech",
+    "isFeatured": true
+  },
+  {
+    "date": "2025.11",
+    "title": "阿部寛のホームページがhttps化したけど速度は実際どうなったのかについて検証した話",
+    "url": "https://qiita.com/duck_ahiru_Z/items/5887f8c9e50ffd25dd04",
+    "category": "Tech",
+    "isFeatured": true
   }
 ]
