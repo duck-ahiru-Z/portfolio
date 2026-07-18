@@ -25,6 +25,19 @@
   },
   {
     "isFeatured": true,
+    "date": "2026.07",
+    "title": "Lecture Hack",
+    "shortDescription": "Lecture Hack - AI講義録音＆要約",
+    "detailedDescription": "Androidネイティブアプリを開発、さらにストア公開までしました。長いこと僕が欲しいと思っていたアプリです。",
+    "behindTheScenes": "Androidネイティブアプリを作成してストア公開して、あわよくば収益化して不労所得にしたかったのですが、現実はそんなに甘くありませんでした。",
+    "image": "img/product/lecturehack.png",
+    "productUrl": "https://play.google.com/store/apps/details?id=com.duckahiruz.lecturehack",
+    "githubUrl": "https://github.com/duck-ahiru-Z/lecture",
+    "tags": ["Flutter",  "Dart",  "Gemini API", "Google AdMob", "Android"]
+  },
+
+  {
+    "isFeatured": true,
     "date": "2026.06",
     "title": "G-end",
     "shortDescription": "虫（G）対策シミュレート・対策モバイルWebアプリケーション。",
