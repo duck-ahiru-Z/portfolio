@@ -668,10 +668,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
     activeCerts.forEach(cert => {
       const li = document.createElement('li');
+      const badgeHtml = `<span class="tag tag-favorite" style="font-size:0.65rem; margin-left:0.4rem; padding:0.1rem 0.3rem;">取得済</span>`;
+      
       li.innerHTML = `
         <div>
           <span class="cert-date">${cert.date}</span>
           <span class="cert-title">${cert.title}</span>
+          ${badgeHtml}
         </div>
         ${cert.description ? `<p class="cert-desc">${cert.description}</p>` : ''}
       `;
