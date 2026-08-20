@@ -1,5 +1,17 @@
 [
   {
+    "isFeatured": true,
+    "date": "2026.08",
+    "title": "環状線吹っ飛ばしゲーム",
+    "shortDescription": "環状線を吹っ飛ばすゲームです。",
+    "detailedDescription": "環状線は山手線と違ってずっと回るわけではなく、奈良や和歌山・関西空港やコスモスクエアなどに飛ばされることを元ネタにしています。",
+    "behindTheScenes": "環状線に乗っているときに閃き、スマホだけで電車内で作成しました。何人かにテストプレイしてもらいましたが、好評でした。",
+    "image": "img/product/kanzyousen.png",
+    "productUrl": "https://duck-ahiru-z.github.io/kanzyousen/",
+    "githubUrl": "https://github.com/duck-ahiru-Z/kanzyousen",
+    "tags": ["HTML", "CSS", "JavaScript"]
+  },
+  {
     "isFeatured": false,
     "date": "2026.08",
     "title": "逆時計",
