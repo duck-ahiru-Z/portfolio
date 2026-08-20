@@ -18,7 +18,7 @@
     "shortDescription": "違和感ある時計",
     "detailedDescription": "逆回転するだけの時計です。特に理由はないです。",
     "behindTheScenes": "突然逆回転する時計もありだなと思って作成しました。",
-    "image": "https://placehold.co/600x400/385923/white?text=reverse-clock",
+    "image": "img/product/reverse-clock.png",
     "productUrl": "https://duck-ahiru-z.github.io/reverse-clock/",
     "githubUrl": "https://github.com/duck-ahiru-Z/reverse-clock",
     "tags": ["HTML", "CSS", "JavaScript"]
