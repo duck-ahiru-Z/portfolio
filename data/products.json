@@ -1,5 +1,17 @@
 [
   {
+    "isFeatured": false,
+    "date": "2026.08",
+    "title": "山手線だとどれくらい？",
+    "shortDescription": "世界中を「山手線何個分」で測れるサイト",
+    "detailedDescription": "東京ドーム何個分とはよく聞きますが、山手線何個分なんて聞かないですよね。そのため、山手線だとどれくらいかを可視化できるようにしました。",
+    "behindTheScenes": "山手線の路線上の点を手動で600か所以上まとめたのが大変でした。",
+    "image": "img/product/yamanotesen.png",
+    "productUrl": "https://duck-ahiru-z.github.io/yamanotesen/",
+    "githubUrl": "https://github.com/duck-ahiru-Z/yamanotesen/",
+    "tags": ["HTML", "CSS", "JavaScript"]
+  },
+  {
     "isFeatured": true,
     "date": "2026.08",
     "title": "環状線吹っ飛ばしゲーム",
