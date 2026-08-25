@@ -1,6 +1,12 @@
 [
   {
     "date": "2026.08",
+    "title": "独立行政法人情報処理推進機構 (IPA) 基本情報技術者試験（FE）合格",
+    "description": "科目A680・科目B710でした。もう少しきちんと勉強するべきでしたが、合格できてよかったです！",
+    "isAcquired": true
+  },
+  {
+    "date": "2026.08",
     "title": "Google People Management Essentials 修了（認定証・バッジ獲得）",
     "description": "Googleが提供するマネージャー養成プログラムプログラム。Create a High-Performing Team，Set and Achieve Team Goals，Support Individual Growth and Development，Grow as a Managerの4つの専門分野をすべて修了しました。",
     "isAcquired": true
