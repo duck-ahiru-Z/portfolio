@@ -1,5 +1,14 @@
 [
   {
+    "isFeatured": false,
+    "date": "2026.08",
+    "title": "宇宙旅行AIイラストコンテスト",
+    "description": "作成したイラストが宇宙旅行AIイラストコンテストの最終選考にノミネート選出されました！",
+    "behindTheScenes": "たしかにきれいなイラストですが、顔がつぶれています。まあ未来の人間はこんな感じってことにでもします！",
+    "link": "https://iromirai.jp/posts/615361330a66"
+  },
+
+  {
     "isFeatured": true,
     "date": "2026.06",
     "title": "【技育CAMP2026】ハッカソン Vol.3 サポーターズ賞受賞",
