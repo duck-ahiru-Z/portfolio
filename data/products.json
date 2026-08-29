@@ -1,5 +1,17 @@
 [
   {
+    "isFeatured": true,
+    "date": "2026.08",
+    "title": "ショートカットキー検定",
+    "shortDescription": "ショートカットキー、使えてる？",
+    "detailedDescription": "ショートカットキー検定資格試験を作成してみました。完全無料のIBT方式試験となっています。ぜひチャレンジしてみては？",
+    "behindTheScenes": "なんと合格すると名前入りの合格証明書が発行されます。思ったよりめちゃくちゃ作るの大変でした。",
+    "image": "img/product/shortcutkeyexam.png",
+    "productUrl": "https://shortcutkeyexam.vercel.app/",
+    "githubUrl": "https://github.com/duck-ahiru-Z/shortcut",
+    "tags": ["Next.js", "React", "Tailwind CSS", "JSON", "Firebase"]
+  },
+  {
     "isFeatured": false,
     "date": "2026.08",
     "title": "山手線だとどれくらい？",
@@ -36,9 +48,9 @@
     "tags": ["HTML", "CSS", "JavaScript"]
   },
   {
-    "isFeatured": true,
+    "isFeatured": false,
     "date": "2026.07",
-    "title": "ショートカットキー検定",
+    "title": "旧ショートカットキー検定",
     "shortDescription": "ショートカットキー、使えてる？",
     "detailedDescription": "ショートカットキー検定資格試験を作成してみました。完全無料のIBT方式試験となっています。ぜひチャレンジしてみては？",
     "behindTheScenes": "なんと合格すると名前入りの合格証明書が発行されます。思ったよりめちゃくちゃ作るの大変でした。",
