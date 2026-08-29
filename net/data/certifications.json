@@ -1,0 +1,33 @@
+[
+  {
+    "date": "2026.08",
+    "title": "独立行政法人情報処理推進機構 (IPA) 基本情報技術者試験（FE）合格",
+    "description": "科目A680・科目B710でした。もう少しきちんと勉強するべきでしたが、合格できてよかったです！",
+    "isAcquired": true
+  },
+  {
+    "date": "2026.08",
+    "title": "Google People Management Essentials 修了（認定証・バッジ獲得）",
+    "description": "Googleが提供するマネージャー養成プログラムプログラム。Create a High-Performing Team，Set and Achieve Team Goals，Support Individual Growth and Development，Grow as a Managerの4つの専門分野をすべて修了しました。",
+    "isAcquired": true
+  },
+  {
+    "date": "2026.07",
+    "title": "ショートカットキー検定5級取得（満点）",
+    "description": "僕が運営するショートカットキー検定事務局の資格試験ですので、ある意味ずる？ですね。きちんと解いて満点でした。",
+    "isAcquired": false
+  },
+  {
+    "date": "2026.04",
+    "title": "Google AI Essentials 修了 (認定証・バッジ獲得)",
+    "description": "Googleが提供するAI利活用プログラム。Introduction to AI, Maximize Productivity With AI Tools, Discover the Art of Prompting, Use AI Responsibly, Stay Ahead of the AI Curveの5つの専門分野をすべて修了しました。",
+    "isAcquired": true
+  },
+  {
+    "date": "2026.02",
+    "title": "独立行政法人情報処理推進機構 (IPA) ITパスポート試験合格",
+    "description": "いい加減受けようと思っていたので受験しました。勉強不足でかなり心配でしたが、無事に合格できました！",
+    "isAcquired": true
+  }
+
+]
