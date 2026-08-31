@@ -1,5 +1,23 @@
 [
   {
+    "date": "2026.09.01",
+    "company": "MIXI",
+    "location": "スクランブルスクエア",
+    "memo": "DroidKaigiスカラシップにて訪問"
+  },
+  {
+    "date": "2026.09.01",
+    "company": "サイボウズ",
+    "location": "日本橋タワー",
+    "memo": "DroidKaigiスカラシップにて訪問 (ランチ)"
+  },
+  {
+    "date": "2026.09.01",
+    "company": "メルカリ",
+    "location": "六本木ヒルズ森タワー",
+    "memo": "DroidKaigiスカラシップにて訪問"
+  },
+  {
     "date": "2026.02.26",
     "company": "(株)Link-U Technologies",
     "location": "和歌山県 (紀北)",
@@ -46,23 +64,5 @@
     "company": "クオリティソフト(株)",
     "location": "和歌山県 (紀南)",
     "memo": "和歌山県IT企業見学ツアー (紀南コース)"
-  },
-  {
-    "date": "9月1日",
-    "company": "MIXI",
-    "location": "スクランブルスクエア",
-    "memo": "DroidKaigiスカラシップにて訪問"
-  },
-  {
-    "date": "9月1日",
-    "company": "サイボウズ",
-    "location": "日本橋タワー",
-    "memo": "DroidKaigiスカラシップにて訪問 (ランチ)"
-  },
-  {
-    "date": "9月1日",
-    "company": "メルカリ",
-    "location": "六本木ヒルズ森タワー",
-    "memo": "DroidKaigiスカラシップにて訪問"
   }
 ]
