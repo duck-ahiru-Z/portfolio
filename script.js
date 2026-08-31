@@ -105,15 +105,16 @@ document.addEventListener('DOMContentLoaded', () => {
     './data/reading.json',
     './data/certifications.json',
     './data/links.json',
-    './data/blog.json'
+    './data/blog.json',
+    './data/office_visits.json'
   ];
 
   Promise.all(dataPaths.map(url => fetch(url).then(res => {
     if (!res.ok) throw new Error(`${url} のロードに失敗しました。`);
     return res.json();
   })))
-  .then(([profile, products, awards, activities, reading, certifications, links, blog]) => {
-    initializePortfolio({ profile, products, awards, activities, reading, certifications, links, blog });
+  .then(([profile, products, awards, activities, reading, certifications, links, blog, officeVisits]) => {
+    initializePortfolio({ profile, products, awards, activities, reading, certifications, links, blog, officeVisits });
   })
   .catch(error => {
     showErrorFallback(error.message);
@@ -215,6 +216,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // 7. Links Section
     renderLinks(datasets.links);
+
+    // 8. Office Visits Section
+    renderOfficeVisits(datasets.officeVisits);
   }
 
   // ==========================================================================
@@ -695,6 +699,35 @@ document.addEventListener('DOMContentLoaded', () => {
         <span class="url-desc">- ${link.description}</span>
       `;
       linksContainer.appendChild(li);
+    });
+  }
+
+  // ⑦ Office Visits
+  function renderOfficeVisits(visits) {
+    const container = document.getElementById('office-visits-list');
+    if (!container) return;
+    container.innerHTML = '';
+
+    if (!visits || visits.length === 0) {
+      container.innerHTML = '<li class="visit-item" style="color:var(--text-muted);">まだデータがありません。</li>';
+      return;
+    }
+
+    // 新しい順にソートする (dateの降順想定)
+    const sortedVisits = [...visits].sort((a, b) => b.date.localeCompare(a.date));
+
+    sortedVisits.forEach(visit => {
+      const li = document.createElement('li');
+      li.className = 'visit-item';
+      li.innerHTML = `
+        <div class="visit-header">
+          <span class="visit-date">${visit.date}</span>
+          <span class="visit-company">${visit.company}</span>
+          <span class="visit-location">${visit.location}</span>
+        </div>
+        <div class="visit-memo">${visit.memo}</div>
+      `;
+      container.appendChild(li);
     });
   }
 });
