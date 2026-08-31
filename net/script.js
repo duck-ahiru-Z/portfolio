@@ -713,10 +713,8 @@ document.addEventListener('DOMContentLoaded', () => {
       return;
     }
 
-    // 新しい順にソートする (dateの降順想定)
-    const sortedVisits = [...visits].sort((a, b) => b.date.localeCompare(a.date));
-
-    sortedVisits.forEach(visit => {
+    // JSONの並び順のまま表示する (上から順番)
+    visits.forEach(visit => {
       const li = document.createElement('li');
       li.className = 'visit-item';
       li.innerHTML = `
