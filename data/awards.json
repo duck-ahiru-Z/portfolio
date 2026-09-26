@@ -1,20 +1,21 @@
 [
   {
-    "isFeatured": false,
-    "date": "2026.08",
-    "title": "U25 Art Contest展",
-    "description": "作成したイラストがU25 Art Contest展の一次審査を通過しました！",
-    "behindTheScenes": "会場では、メニューから作品を選んで中型モニターで鑑賞していただく方式で展示されるらしいです！実際に見てきました。他にもすごい感動する作品が多くありました。",
-    "link": "https://www.hi-tokyo-yha.org/26-055-jp/"
+    "isFeatured": true,
+    "date": "2026.09",
+    "title": "宇宙旅行AIイラストコンテスト",
+    "description": "作成したイラストが宇宙旅行AIイラストコンテストのイロミライ特別賞を受賞しました！",
+    "behindTheScenes": "日本橋の会場で展示されていました。きれいなイラストですが、顔がつぶれています。まあ未来の人間はこんな感じってことにでもします！",
+    "link": "https://iromirai.jp/posts/615361330a66"
   },
   {
     "isFeatured": false,
     "date": "2026.08",
-    "title": "宇宙旅行AIイラストコンテスト",
-    "description": "作成したイラストが宇宙旅行AIイラストコンテストの最終選考にノミネート選出されました！",
-    "behindTheScenes": "たしかにきれいなイラストですが、顔がつぶれています。まあ未来の人間はこんな感じってことにでもします！",
-    "link": "https://iromirai.jp/posts/615361330a66"
+    "title": "U25 Art Contest展",
+    "description": "作成したイラストがU25 Art Contest展の一次審査を通過し、入選しました！",
+    "behindTheScenes": "会場では、メニューから作品を選んで中型モニターで鑑賞していただく方式で展示されるらしいです！実際に見てきました。他にもすごい感動する作品が多くありました。",
+    "link": "https://www.hi-tokyo-yha.org/26-055-jp/"
   },
+
 
   {
     "isFeatured": true,
