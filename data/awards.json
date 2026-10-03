@@ -6,7 +6,7 @@
   "description": "開発者向けCLIツール「DevDuck」で技育CAMP2026 ハッカソン Vol.5に参加し、サポーターズ賞を受賞しました！",
   "behindTheScenes": "AIにエラーを丸投げすると答えまで出てしまうことに違和感を持ち、「自分でエラーを理解する」ことを支援するCLIとして開発しました。発表直前にはv0.1.0をOSSとして正式リリースし、Windows・macOS・Linux向けのインストーラーまで用意しました。",
   "link": "https://github.com/duck-ahiru-Z/DevDuck"
-}
+},
   {
     "isFeatured": true,
     "date": "2026.09",
