@@ -1,4 +1,16 @@
 [
+{
+  "isFeatured": true,
+  "date": "2026.10",
+  "title": "DevDuck",
+  "shortDescription": "AIに答えを聞く前に、エラーを自分で理解するCLI",
+  "detailedDescription": "プログラミング中のエラーを、日本語の解説と段階的なヒントで理解することを支援する開発者向けCLIツールです。Python、C、Java、Git、Dockerに対応し、Beginner・Intermediate・Advancedの3段階でヒント量を調整できます。【技育CAMP2026】ハッカソン Vol.5でサポーターズ賞をいただきました。",
+  "behindTheScenes": "AIにエラーを貼り付けると修正コードまで全部出てしまい、自分で考える機会が減ることに違和感を持ったのが開発のきっかけです。よくあるエラーはローカルで解説し、必要な場合のみAIを使う構成や、OS Credential StoreでのAPIキー管理、GitHub Actionsによる6環境向けビルド、SHA-256検証付きインストーラーまで実装しました。",
+  "image": "img/product/devduck.png",
+  "productUrl": "https://github.com/duck-ahiru-Z/DevDuck/releases/tag/v0.1.0",
+  "githubUrl": "https://github.com/duck-ahiru-Z/DevDuck",
+  "tags": ["Go", "CLI", "OSS"]
+},
   {
     "isFeatured": true,
     "date": "2026.08",
