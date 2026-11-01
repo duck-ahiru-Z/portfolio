@@ -1,5 +1,11 @@
 [
   {
+    "date": "2026.10",
+    "title": "独立行政法人情報処理推進機構 (IPA) 応用情報技術者試験（AP）科目A基準突破",
+    "description": "科目A68.75でした。午後も頑張ります。",
+    "isAcquired": true
+  },
+  {
     "date": "2026.08",
     "title": "独立行政法人情報処理推進機構 (IPA) 基本情報技術者試験（FE）合格",
     "description": "科目A680・科目B710でした。もう少しきちんと勉強するべきでしたが、合格できてよかったです！",
@@ -9,7 +15,7 @@
     "date": "2026.08",
     "title": "Google People Management Essentials 修了（認定証・バッジ獲得）",
     "description": "Googleが提供するマネージャー養成プログラムプログラム。Create a High-Performing Team，Set and Achieve Team Goals，Support Individual Growth and Development，Grow as a Managerの4つの専門分野をすべて修了しました。",
-    "isAcquired": true
+    "isAcquired": false
   },
   {
     "date": "2026.07",
@@ -21,7 +27,7 @@
     "date": "2026.04",
     "title": "Google AI Essentials 修了 (認定証・バッジ獲得)",
     "description": "Googleが提供するAI利活用プログラム。Introduction to AI, Maximize Productivity With AI Tools, Discover the Art of Prompting, Use AI Responsibly, Stay Ahead of the AI Curveの5つの専門分野をすべて修了しました。",
-    "isAcquired": true
+    "isAcquired": false
   },
   {
     "date": "2026.02",
