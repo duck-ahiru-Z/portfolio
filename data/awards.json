@@ -1,5 +1,21 @@
 [
 {
+  "isFeatured": false,
+  "date": "2026.11",
+  "title": "第13回 Gemini Challenge 部門別 MVPに選出",
+  "description": "第13回 Gemini Challenge　その他部門 MVPで受賞しました。",
+  "behindTheScenes": "Geminiと見つけた、通学路のもうひとつの季節を作成しました。",
+  "link": ""
+},
+{
+  "isFeatured": false,
+  "date": "2026.11",
+  "title": "第13回 Gemini Challenge 部門別 MVPに選出",
+  "description": "第13回 Gemini Challenge　新機能・アプリ・ツール開発部門 MVPで受賞しました。",
+  "behindTheScenes": "毎日のToDoをRPG化する「DAILY QUEST」をGemini Canvasで作成しました。",
+  "link": ""
+},
+{
   "isFeatured": true,
   "date": "2026.10",
   "title": "【技育CAMP2026】ハッカソン Vol.5 サポーターズ賞",
